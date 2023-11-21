@@ -1,4 +1,4 @@
-import streamlit
+cimport streamlit
 streamlit.title('My Parent New Healthy Diner')
 
 streamlit.header('Breakfast Favourites')
@@ -14,7 +14,7 @@ my_fruit_list = my_fruit_list.set_index('Fruit')
 
 # let's put a picklist here so that the user can pick the fruit the want to include
 #prepulate table to set example selection for customer
-fruits_to_show= streamlit.multiselect("Pick some fruits: ", list(my_fruit_list.index),['Avocado', 'Strawberries'])
+fruits_selected= streamlit.multiselect("Pick some fruits: ", list(my_fruit_list.index),['Avocado', 'Strawberries'])
 fruits_to_show = my_fruit_list.loc[fruits_selected]
 
 #display the table on the page
